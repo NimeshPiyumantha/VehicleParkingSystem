@@ -1,0 +1,42 @@
+
+.btn{
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Bell MT";
+    -fx-background-radius :15px;
+    -fx-border-color:  #2c3e50;
+    -fx-border-radius: 15px;
+    -fx-border-width: 2px;
+}
+
+.textPane{
+    -fx-background-color: #bdc3c7;
+    -fx-background-radius: 25px;
+    -fx-border-color: #2c3e50;
+    -fx-border-radius: 25px;
+    -fx-border-width: 3px;
+}
+.textPane1{
+    -fx-background-color: #bdc3c7;
+    -fx-background-radius: 25px;
+    -fx-border-color: #2c3e50;
+    -fx-border-radius: 25px;
+    -fx-border-width: 2px;
+}
+.textField{
+    -fx-background-color:  #bdc3c7;
+    -fx-prompt-text-fill: #726d6d;
+    -fx-font-size: 14px;
+    -fx-font-family: "Bell MT";
+    -fx-font-weight: Bold;
+
+}
+.textLabel{
+    -fx-background-color:  #bdc3c7;
+    -fx-padding: 0 5px 0px 5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(76, 73, 73, 0.83);
+    -fx-font-family: "Bell MT";
+    -fx-font-size: 16px;
+}

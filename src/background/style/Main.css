@@ -1,0 +1,41 @@
+.txt1 {
+    -fx-background-color: #ecf0f1;
+    -fx-border-color: #2c3e50;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-family: "Bell MT";
+    -fx-font-size: 16px;
+    -fx-background-radius: 18px;
+    -fx-border-radius: 20px;
+    -fx-border-width: 3px;
+}
+
+.txt {
+    -fx-font-family: Algerian;
+    -fx-font-size: 30px;
+}
+
+.btn {
+    -fx-background-color: #81ecec;
+    -fx-border-color: #2f3640;
+    -fx-background-radius: 22px;
+    -fx-border-radius: 25px;
+    -fx-border-width: 3px;
+}
+
+.btn1 {
+    -fx-background-color:  #95afc0;
+    -fx-border-color:  #2f3640;
+    -fx-background-radius: 22px;
+    -fx-border-radius: 25px;
+    -fx-border-width: 3px;
+}
+
+.label{
+    -fx-font-size:22px;
+    -fx-font-family: "Bell MT";
+    -fx-fill: black;
+    -fx-font-weight: Bold ;
+}
+
+

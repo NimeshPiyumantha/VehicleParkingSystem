@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ManagementLoginContext" prefHeight="300.0" prefWidth="500.0" stylesheets="@../background/style/login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagementLoginController">
+    <children>
+        <ImageView fitHeight="300.0" fitWidth="500.0" pickOnBounds="true">
+            <image>
+                <Image url="@../background/Car.jpg" />
+            </image></ImageView>
+      <AnchorPane layoutX="20.0" layoutY="24.0" prefHeight="260.0" prefWidth="460.0" styleClass="textPane">
+         <children>
+            <VBox layoutX="102.0" layoutY="70.0" prefHeight="120.0" prefWidth="287.0">
+               <children>
+                  <AnchorPane prefHeight="39.0" prefWidth="301.0" styleClass="textPane1">
+                     <children>
+                        <TextField fx:id="txtUserName" layoutX="14.0" layoutY="6.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="239.0" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="User Name" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="42.0" prefWidth="260.0" styleClass="textPane1">
+                     <children>
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Password" />
+                        <PasswordField fx:id="txtPassword" layoutX="15.0" layoutY="7.0" prefHeight="27.0" prefWidth="253.0" styleClass="textField" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <ImageView fitHeight="73.0" fitWidth="67.0" layoutX="212.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../background/profile.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="326.0" layoutY="208.0" onAction="#CancelOnAction" prefHeight="33.0" prefWidth="97.0" styleClass="btn" text="Cancel" textAlignment="CENTER">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </JFXButton>
+                <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="197.0" layoutY="208.0" onAction="#LoginOnAction" prefHeight="33.0" prefWidth="97.0" styleClass="btn" text="Login" textAlignment="CENTER">
+                    <font>
+                        <Font name="Bell MT Bold" size="18.0" />
+                    </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

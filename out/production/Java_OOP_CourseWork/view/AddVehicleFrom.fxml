@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AddVehicleContext" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../background/style/AddVehicle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddVehicleFromController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="1100.0" pickOnBounds="true">
+            <image>
+                <Image url="@../background/Car.jpg" />
+            </image></ImageView>
+      <TableView fx:id="tblVehicle" fixedCellSize="0.0" layoutX="104.0" layoutY="173.0" opacity="0.96" prefHeight="413.0" prefWidth="892.0" style="-fx-border-color: #2c3e50; -fx-border-width: 3; -fx-background-color: #bdc3c7;">
+        <columns>
+          <TableColumn fx:id="colVehicleNo" prefWidth="231.0" text="Vehicle Number" />
+            <TableColumn fx:id="colMaxWeight" prefWidth="155.0" text="Maximum Weight" />
+            <TableColumn fx:id="colNoOfPassenger" prefWidth="155.0" text="No of Passengers" />
+            <TableColumn fx:id="colVehicleType" prefWidth="200.0" text="Vehicle Type" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane layoutX="24.0" layoutY="14.0" prefHeight="148.0" prefWidth="1052.0" styleClass="textPane" stylesheets="@../background/style/AddVehicle.css">
+         <children>
+            <VBox layoutX="29.0" layoutY="10.0" prefHeight="120.0" prefWidth="319.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="260.0" styleClass="textPane1">
+                     <children>
+                        <TextField fx:id="txtVehicleNumber" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="274.0" promptText="NA-3434" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Vehicle Number" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="42.0" prefWidth="260.0" styleClass="textPane1">
+                     <children>
+                        <TextField fx:id="txtMWeight" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="274.0" promptText="3500" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Maximum Weight" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox layoutX="456.0" layoutY="15.0" prefHeight="118.0" prefWidth="319.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="260.0" styleClass="textPane1">
+                     <children>
+                        <TextField fx:id="txtNoPassengers" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="274.0" promptText="60" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="No of Passengers" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="42.0" prefWidth="260.0" styleClass="textPane1">
+                     <children>
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Vehicle Type" />
+                        <ComboBox fx:id="cmbVehicleType" layoutX="42.0" layoutY="7.0" prefHeight="25.0" prefWidth="253.0" styleClass="textField" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <JFXButton buttonType="RAISED" layoutX="873.0" layoutY="80.0" onAction="#CancelOnAction" prefHeight="33.0" prefWidth="143.0" styleClass="btn" text="Cancel" textAlignment="CENTER">
+               <font>
+                  <Font name="Bell MT Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="873.0" layoutY="33.0" onAction="#SaveVehicleOnAction" prefHeight="33.0" prefWidth="143.0" styleClass="btn" text="Save Vehicle" textAlignment="CENTER">
+               <font>
+                  <Font name="Bell MT Bold" size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

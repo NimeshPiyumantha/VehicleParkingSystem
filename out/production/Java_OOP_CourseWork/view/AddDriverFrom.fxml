@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AddDriverContext" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../background/style/AddDriver.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddDriverFromController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="1100.0" pickOnBounds="true">
+            <image>
+                <Image url="@../background/Car.jpg" />
+            </image></ImageView>
+      <AnchorPane layoutX="24.0" layoutY="18.0" prefHeight="148.0" prefWidth="1052.0" styleClass="textPane">
+         <children>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="889.0" layoutY="53.0" onAction="#SaveDriverOnAction" prefHeight="33.0" prefWidth="143.0" styleClass="btn" text="Save Driver" textAlignment="CENTER">
+               <font>
+                  <Font name="Bell MT Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnNew" buttonType="RAISED" layoutX="889.0" layoutY="14.0" onAction="#AddNewDriverOnAction" prefHeight="33.0" prefWidth="143.0" styleClass="btn" text="+ New Driver" textAlignment="CENTER">
+               <font>
+                  <Font name="Bell MT Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="889.0" layoutY="97.0" onAction="#CancelOnAction" prefHeight="33.0" prefWidth="143.0" styleClass="btn" text="Cancel" textAlignment="CENTER">
+               <font>
+                  <Font name="Bell MT Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <VBox layoutX="21.0" layoutY="10.0" prefHeight="94.0" prefWidth="251.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="260.0" styleClass="textPane1">
+                     <children>
+                        <TextField fx:id="txtDriverName" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="223.0" promptText="Sumith Kumara" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Driver Name" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="42.0" prefWidth="260.0" styleClass="textPane1">
+                     <children>
+                        <TextField fx:id="txtNic" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="223.0" promptText="7835348345V" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="NIC" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox layoutX="301.0" layoutY="14.0" prefHeight="94.0" prefWidth="251.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="260.0" styleClass="textPane1">
+                     <children>
+                        <TextField fx:id="txtDrivingLicenseNo" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="223.0" promptText="B6474845" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Driving License No" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="42.0" prefWidth="260.0" styleClass="textPane1">
+                     <children>
+                        <TextField fx:id="txtAddress" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="223.0" promptText="Panadura" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Address" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox layoutX="597.0" layoutY="14.0" prefHeight="94.0" prefWidth="251.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="260.0" styleClass="textPane1">
+                     <children>
+                        <TextField fx:id="txtContactNo" layoutX="13.0" layoutY="8.0" onKeyReleased="#textFields_Key_Released" prefHeight="28.0" prefWidth="223.0" promptText="0725637456" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Contact NO" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblDriver" fixedCellSize="0.0" layoutX="63.0" layoutY="187.0" prefHeight="397.0" prefWidth="974.0" style="-fx-border-color: #2c3e50; -fx-border-width: 3; -fx-background-color: #bdc3c7;">
+         <columns>
+            <TableColumn fx:id="colDriverName" prefWidth="186.0" text="Driver Name" />
+            <TableColumn fx:id="colDriverNic" prefWidth="169.0" text="NIC" />
+            <TableColumn fx:id="colDrivingLicenseNo" prefWidth="180.0" text="Driving License No" />
+            <TableColumn fx:id="colAddress" prefWidth="175.0" text="Address" />
+            <TableColumn fx:id="colContactNo" prefWidth="140.0" text="Contact NO" />
+            <TableColumn fx:id="colOption" prefWidth="115.0" text="Option" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+    </children>
+</AnchorPane>
